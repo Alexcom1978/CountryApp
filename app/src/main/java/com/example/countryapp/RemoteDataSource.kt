@@ -10,7 +10,7 @@ import retrofit2.http.Path
 
 interface RestCountriesAPI {
     @GET("/name/{name}")
-   fun getCountryByNames (@Path("name") cityname: String): Call<List<Country>>
+  suspend fun getCountryByNames (@Path("name") cityname: String): List<Country>
 }
 
 var retrofit = Retrofit.Builder()
