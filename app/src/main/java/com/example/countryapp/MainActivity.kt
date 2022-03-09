@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
 
 
             lifecycleScope.launch {
-                val contryes: List<Country> = RestCountriesAPI.getCountryByNames(contryName)
+                val contryes: List<Country> = create().getCountryByNames(contryName)
                 val contry = contryes[0]
                 binding.countryNameTextview.text = contry.names.toString()
                 binding.capitalTextview.text = contry.capital
